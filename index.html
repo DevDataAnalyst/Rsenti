@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://www.r-project.org/Rlogo.png" type="image/gif" sizes="16x16">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="js/script.js"></script>
+    <title>SentimentAnalyzer</title>
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/social-buttons.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href= "https://raw.githubusercontent.com/noizwaves/bootstrap-social-buttons/v1.0.0/social-buttons.css">
+    <!--
+   
+-->
+    <!-- Custom CSS -->
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// 
+    
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+-->
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "99c816f5-3cf6-4061-9166-f16889297b3c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</head>
+
+<body>
+
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+    
+    <!-- Page Content -->
+     
+   <div class="embed-responsive embed-responsive-16by9">
+       
+  <iframe class="embed-responsive-item" src="https://www.csc.ncsu.edu/faculty/healey/tweet_viz/tweet_app/"></iframe>
+       
+</div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+        
+        <script src="js/script.js"></script>
+        <script id="dsq-count-scr" src="//rwebdev.disqus.com/count.js" async></script>
+<script type='text/javascript'>
+
+function saveTextAsFile()
+{
+	var textToWrite = document.getElementById("inputTextToSave").value;
+	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+	var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileNameToSaveAs;
+	downloadLink.innerHTML = "Download File";
+	if (window.webkitURL != null)
+	{
+		// Chrome allows the link to be clicked
+		// without actually adding it to the DOM.
+		downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+	}
+	else
+	{
+		// Firefox requires the link to be added to the DOM
+		// before it can be clicked.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		downloadLink.onclick = destroyClickedElement;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+	}
+
+	downloadLink.click();
+}
+
+function destroyClickedElement(event)
+{
+	document.body.removeChild(event.target);
+}
+
+function loadFileAsText()
+{
+	var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+	var fileReader = new FileReader();
+	fileReader.onload = function(fileLoadedEvent) 
+	{
+		var textFromFileLoaded = fileLoadedEvent.target.result;
+		document.getElementById("inputTextToSave").value = textFromFileLoaded;
+	};
+	fileReader.readAsText(fileToLoad, "UTF-8");
+}
+
+
+</script>
+</body>
+
+</html>
